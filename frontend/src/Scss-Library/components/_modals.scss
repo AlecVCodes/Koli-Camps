@@ -1,0 +1,81 @@
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100000000000000;
+  overflow: hidden;
+  inset: 0 0 0 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campsite-modal {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 5px;
+  max-width: 1200px;
+  .campsite-content {
+    margin: 0;
+    display: flex;
+
+    .text {
+      padding-right: 2rem;
+
+      h3 {
+        margin: 0;
+      }
+
+      p {
+        margin-block: 0.5rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .img-gallery {
+    max-width: 1000px; /* Set a maximum width */
+    width: 90%; /* Adjust as needed */
+    margin: 0 auto; /* Center the gallery horizontally */
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Responsive grid */
+    grid-gap: 10px; /* Adjust the gap between grid items */
+  }
+
+  .cube-img-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: green;
+    height: 200px;
+    background-image: url(img//lamington-park/lamington-park-cube\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+  .cube-img-2 {
+    background-repeat: no-repeat;
+    background-image: url(img//lamington-park/lamington-park-cube-2.png);
+    grid-area: 1 / 2 / 2 / 3;
+    height: 200px;
+    background-color: red;
+    background-size: cover;
+  }
+
+  .landscape-img {
+    grid-area: 2 / 1 / 3 / 3;
+    background-color: blue;
+    height: 200px;
+    background-image: url("img/lamington-park/lamington-park-landscape.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .other-info {
+    margin-top: 2rem;
+    svg {
+      margin: 0 !important;
+    }
+  }
+}

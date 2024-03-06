@@ -1,0 +1,36 @@
+// index.scss
+
+// Variables & Functions
+// @import "../src/Scss-Library/variables";
+// @import "../src/Scss-Library/functions";
+
+// // Base & Layout
+// @import "../src/Scss-Library/breakpoints";
+@import "base.scss"; // // Colours
+// @import "../src/Scss-Library/colours";
+// @import "../src/Scss-Library/components/modal";
+
+// // //components
+@import "components/navbar";
+// // @import "../src/Scss-Library/components/preloader";
+// // @import "../src/Scss-Library/components/adminForm";
+// // @import "../src/Scss-Library/components/error_message";
+// // @import "../src/Scss-Library/components/success_messages";
+@import "components/buttons";
+// @import "components/contactForm";
+// // @import "../src/Scss-Library/components/slider";
+// // @import "../src/Scss-Library/components/sidebar";
+// // @import "../src//Scss-Library/components/select-menus";
+// // @import "../src/Scss-Library/components/tooltip";
+@import "components/modals";
+// // // @import "../src/Scss-Library//components/input";
+@import "components/cards";
+// // @import "../src/Scss-Library/components/navbar";
+// // @import "../src/Scss-Library/components/iconCircles";
+// // // @import "../src/Scss-Library/components/scrollbars";
+// // @import "../src/Scss-Library/components/footer";
+// // @import "../src/Scss-Library/components/mockup";
+// // // // Utilities
+// // @import "../src/Scss-Library/utilities";
+// //pages
+@import "pages/homePage";

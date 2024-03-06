@@ -1,0 +1,79 @@
+@font-face {
+  src: url("fonts/Geist-Bold.otf");
+  font-family: Geist-Bold;
+}
+
+@font-face {
+  src: url("fonts/Geist-Medium.otf");
+  font-family: Geist-Medium;
+}
+@font-face {
+  src: url("fonts/Geist-Regular.otf");
+  font-family: Geist-Regular;
+}
+@font-face {
+  src: url("fonts/Geist-Light.otf");
+  font-family: Geist-light;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Geist;
+}
+
+body {
+  height: 100vh;
+  background-color: #f9f3f0;
+}
+
+//nav & list items
+
+nav {
+  ul {
+    list-style-type: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-family: Geist-Regular;
+}
+
+h1 {
+  color: #fff;
+  font-family: Geist-Bold;
+  font-size: clamp(2.5rem, 10vw, 5rem);
+}
+h2 {
+  color: #212427;
+  font-family: Geist-Bold;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+}
+h3 {
+  color: #212427;
+  font-family: Geist-Bold;
+  font-size: clamp(1.8rem, 10vw, 2.5rem);
+}
+h4 {
+  color: #212427;
+  font-family: Geist-Bold;
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-family: Geist-Bold;
+}
+
+p {
+  font-family: Geist-light;
+}
+
+button {
+  cursor: pointer;
+}

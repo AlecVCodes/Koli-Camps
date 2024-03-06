@@ -1,0 +1,454 @@
+@font-face {
+  src: url("fonts/Geist-Bold.otf");
+  font-family: Geist-Bold;
+}
+@font-face {
+  src: url("fonts/Geist-Medium.otf");
+  font-family: Geist-Medium;
+}
+@font-face {
+  src: url("fonts/Geist-Regular.otf");
+  font-family: Geist-Regular;
+}
+@font-face {
+  src: url("fonts/Geist-Light.otf");
+  font-family: Geist-light;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Geist;
+}
+
+body {
+  height: 100vh;
+  background-color: #f9f3f0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-family: Geist-Regular;
+}
+
+h1 {
+  color: #fff;
+  font-family: Geist-Bold;
+  font-size: clamp(2.5rem, 10vw, 5rem);
+}
+
+h2 {
+  color: #212427;
+  font-family: Geist-Bold;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+}
+
+h3 {
+  color: #212427;
+  font-family: Geist-Bold;
+  font-size: clamp(1.8rem, 10vw, 2.5rem);
+}
+
+h4 {
+  color: #212427;
+  font-family: Geist-Bold;
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-family: Geist-Bold;
+}
+
+p {
+  font-family: Geist-light;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+nav ul li {
+  font-family: Geist-Regular;
+  color: #fff;
+  cursor: pointer;
+}
+nav .first-list {
+  margin-left: 1rem;
+}
+nav .first-list li {
+  margin-inline: 1rem;
+}
+nav .second-list li {
+  margin-inline: 1rem;
+}
+nav .logo {
+  margin-right: 1rem;
+}
+
+.rounded-btn {
+  border-radius: 25px;
+  border-color: none;
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+}
+
+.nav-btn {
+  border-radius: 25px;
+  border-color: none;
+  padding: 0.5rem 1.5rem;
+  background-color: "transparent";
+  border: 1.5px solid #fff;
+}
+
+.cta-btn {
+  font-family: Geist-Medium;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  border-color: none;
+  padding: 0.5rem 1.5rem;
+  background-color: #da7639;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.square-btn {
+  background-color: #da7639;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: max-content;
+}
+
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100000000000000;
+  overflow: hidden;
+  inset: 0 0 0 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campsite-modal {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 5px;
+  max-width: 1200px;
+}
+.campsite-modal .campsite-content {
+  margin: 0;
+  display: flex;
+}
+.campsite-modal .campsite-content .text {
+  padding-right: 2rem;
+}
+.campsite-modal .campsite-content .text h3 {
+  margin: 0;
+}
+.campsite-modal .campsite-content .text p {
+  margin-block: 0.5rem;
+  line-height: 1.5rem;
+}
+.campsite-modal .img-gallery {
+  max-width: 1000px; /* Set a maximum width */
+  width: 90%; /* Adjust as needed */
+  margin: 0 auto; /* Center the gallery horizontally */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  grid-gap: 10px; /* Adjust the gap between grid items */
+}
+.campsite-modal .cube-img-1 {
+  grid-area: 1/1/2/2;
+  background-color: green;
+  height: 200px;
+  background-image: url(img//lamington-park/lamington-park-cube\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.campsite-modal .cube-img-2 {
+  background-repeat: no-repeat;
+  background-image: url(img//lamington-park/lamington-park-cube-2.png);
+  grid-area: 1/2/2/3;
+  height: 200px;
+  background-color: red;
+  background-size: cover;
+}
+.campsite-modal .landscape-img {
+  grid-area: 2/1/3/3;
+  background-color: blue;
+  height: 200px;
+  background-image: url("img/lamington-park/lamington-park-landscape.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.campsite-modal .other-info {
+  margin-top: 2rem;
+}
+.campsite-modal .other-info svg {
+  margin: 0 !important;
+}
+
+.feature-cards {
+  display: flex;
+  margin-top: 4rem;
+  place-items: bottom;
+  justify-self: center;
+  align-self: end;
+}
+.feature-cards .feature-card {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  max-width: 250px;
+  margin-right: 1rem;
+  background-color: #fff;
+  border-radius: 18px;
+  text-align: center;
+}
+.feature-cards .feature-card h4 {
+  margin-block: 0.5rem;
+}
+
+.qld-campsite-card {
+  background-color: #fff;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.qld-campsite-card .photo-price-grid {
+  width: 100%;
+  max-height: 200px;
+  grid-template-rows: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.qld-campsite-card .photo-price-grid .heart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1/2;
+  margin: 0.5rem 0.5rem 0;
+  justify-self: end;
+  grid-column: 3/4;
+  width: max-content;
+  height: max-content;
+  padding: 0.45rem;
+  border-radius: 5px;
+  z-index: 10000000000000000000;
+  background-color: #fff;
+}
+.qld-campsite-card .photo-price-grid .heart-container svg {
+  cursor: pointer;
+}
+.qld-campsite-card .photo-price-grid .heart-container .clicked {
+  fill: #da7639;
+  animation: heart-animation 250ms ease-in;
+}
+.qld-campsite-card .photo-price-grid .heart-container .clicked path {
+  fill: #da7639;
+}
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.qld-campsite-card .photo-price-grid .img {
+  border-radius: 15px;
+  background-color: paleturquoise;
+  grid-column: 1/6;
+  align-self: stretch;
+  width: 100%;
+  height: 100px;
+  grid-row: 1/2;
+}
+.qld-campsite-card .photo-price-grid .img-1 {
+  background-image: url("img/lamington-national-park.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.qld-campsite-card .photo-price-grid .img-2 {
+  background-image: url("img/fraser-island.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+}
+.qld-campsite-card .photo-price-grid span {
+  font-family: Geist-Regular;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 5px;
+  color: #da7639;
+  grid-column: 2/3;
+  white-space: nowrap;
+  grid-row: 2/3;
+  z-index: 1000;
+  background-color: #fff;
+  place-self: center;
+  margin-top: -20px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.qld-campsite-card ul {
+  list-style-type: circle;
+  padding: 0;
+}
+.qld-campsite-card ul li {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  list-style-position: inside;
+}
+
+.campsite-information-cards {
+  margin-top: 1rem;
+  display: flex;
+  max-width: 320px;
+  justify-content: space-between;
+}
+.campsite-information-cards .campsite-informational-card {
+  border-radius: 2.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align vertically in the middle */
+  align-items: center;
+  background-color: #da7639;
+  padding: 1rem 1rem 0.3rem 1rem;
+  width: 100px;
+  color: #fff;
+  font-weight: Geist-Regular;
+  cursor: pointer;
+}
+.campsite-information-cards .campsite-informational-card svg {
+  margin-bottom: 0.5rem !important;
+}
+
+.hero-section {
+  background-image: url("img/hero-background-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 80vh;
+  position: relative;
+}
+.hero-section main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  flex-direction: column;
+  gap: 0;
+}
+.hero-section h1 {
+  text-align: center;
+}
+.hero-section h1 span {
+  display: block;
+}
+
+.Queensland-Campsites {
+  margin-top: 30rem;
+}
+.Queensland-Campsites .heading {
+  max-width: 1200px;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: 1fr repeat(2, 1fr);
+  display: grid;
+}
+.Queensland-Campsites .heading img {
+  width: 100%;
+  height: 100%;
+  grid-area: "graphic";
+  grid-row: 1/4;
+  grid-column: 1/2;
+}
+.Queensland-Campsites .heading h2 {
+  grid-area: "title";
+  grid-row: 2/4;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  grid-column: 1/3;
+  margin-left: 10rem;
+}
+.Queensland-Campsites .heading p {
+  font-size: 1.1rem;
+  grid-column: 2/4;
+  grid-row: 3/4;
+  padding-inline: 4rem;
+  grid-area: "text";
+  line-height: 1.9rem;
+}
+.Queensland-Campsites .content {
+  margin-inline: auto;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Queensland-Campsites .content .Queensland-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  width: max-content;
+}
+.Queensland-Campsites .content .Queensland-icon .decoration-circle {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #da7639;
+  border-radius: 50%;
+  bottom: -10px;
+  right: -20px;
+}
+.Queensland-Campsites .content h3 {
+  text-align: center;
+  text-align: center;
+  width: max-content;
+  margin-block: 2rem;
+}
+.Queensland-Campsites .content h3 span {
+  display: block !important;
+}
+
+.responsive-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}/*# sourceMappingURL=index.css.map */
